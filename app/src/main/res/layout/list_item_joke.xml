@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:layout_marginStart="2dp"
+    android:layout_marginEnd="2dp"
+    android:layout_marginTop="12dp"
+    android:elevation="3dp"
+    app:cardCornerRadius="9dp"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <RelativeLayout
+           android:id="@+id/viewImageText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           >
+           <ImageView
+               android:id="@+id/listItemImage"
+               android:layout_width="match_parent"
+               android:layout_height="280dp"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentTop="true"
+               android:layout_alignParentEnd="true"
+               android:scaleType="centerCrop"
+               android:src="@color/black" />
+
+           <TextView
+               android:id="@+id/listItemText"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:gravity="center"
+               android:paddingStart="16dp"
+               android:paddingEnd="16dp"
+               android:text="Life if like a very long TV show without a remote control"
+               android:textAlignment="center"
+               android:textColor="@color/white"
+               android:textSize="20dp"
+               android:textStyle="bold" />
+       </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/listItemButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewImageText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFavourite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:paddingStart="10dp"
+                android:drawableLeft="@drawable/baseline_favorite_border_24"
+                android:text="Like" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveJoke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:paddingStart="10dp"
+                android:background="#00FFFFFF"
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/baseline_file_download_24"
+                android:text="Save" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCopyJoke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:paddingStart="10dp"
+                android:textSize="14sp"
+                android:background="#00FFFFFF"
+                android:drawableLeft="@drawable/outline_file_copy_24"
+                android:text="Copy" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnShareJoke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:paddingStart="10dp"
+                android:textSize="14sp"
+                android:background="#00FFFFFF"
+                android:drawableLeft="@drawable/baseline_share_24"
+                android:text="Share" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
